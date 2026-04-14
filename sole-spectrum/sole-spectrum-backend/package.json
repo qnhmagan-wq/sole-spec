@@ -1,12 +1,19 @@
 {
   "name": "sole-spectrum-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend API for Sole Spectrum",
   "main": "index.js",
+  "private": true,
   "scripts": {
-  "start": "node index.js",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,5 +26,10 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.19.1"
-  }
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "nodemon": "^3.0.1"
+  },
+  "homepage": "https://<your-user>.github.io/<repo-name>"
 }
